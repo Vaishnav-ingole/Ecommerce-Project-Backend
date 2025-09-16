@@ -26,10 +26,10 @@ public class AuthServiceImpl implements AuthService{
 		if(userRepository.existsByEmail(dto.getEmail())) {
 			User user = userRepository.findByEmail(dto.getEmail());
 			
-			if(user.getPassword().equals(dto.getPassword())) {
+			if(user.getPassword().equals(dto.getPassword()) && user.isActive()) {
 				return true;
 			}
-		}
+		}s
 		return false;
 	}
 
