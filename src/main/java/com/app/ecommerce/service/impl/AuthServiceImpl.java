@@ -29,7 +29,7 @@ public class AuthServiceImpl implements AuthService{
 			if(user.getPassword().equals(dto.getPassword()) && user.isActive()) {
 				return true;
 			}
-		}
+		}s
 		return false;
 	}
 
